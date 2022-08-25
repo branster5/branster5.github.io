@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+      If you are serving your web app in a path other than the root, change the
+      href value below to reflect the base path you are serving from.
+
+      The path provided below has to start and end with a slash "/" in order for
+      it to work correctly.
+
+      For more details:
+      * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+      This is a placeholder for base href that will be replaced by the value of
+      the `--base-href` argument provided to `flutter build`.
+    -->
+    <base href="">
+
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="A new Flutter project.">
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="untitled">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <title>The Assault Collection CSROI.com</title>
+    <link rel="manifest" href="manifest.json">
+    <script data-item-model='{"Case":"The Assault Collection","IsBuff":false,"ImageUrl":"https://csgostash.com/img/collections/256x198/the_assault_collection.png?id=c61c654cd09e5f06bedd30557f14e0e4","Profit":0,"ProfitPercents":null,"PercentReceive":null,"CaseCost":0,"KeyCost":0,"ROI":null,"RarityROIPercents":null,"RarityValue":null,"IsCaseEstimate":false,"KnifeCosts":null,"ItemCosts":null,"Items":{"Glock-18 | Fade":{"Name":"Glock-18 | Fade","FloatMin":0,"FloatMax":8,"ImageUrl":"https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_glock_aa_fade_light_large.61edcc69ff252d537a4dd14b016cbe826c26ae5b.png","Variations":0,"Rarity":5,"IsKnife":false,"ItemCollectionId":47},"MP9 | Bulldozer":{"Name":"MP9 | Bulldozer","FloatMin":6,"FloatMax":80,"ImageUrl":"https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_mp9_so_yellow_light_large.dfa50bdf02bccb9002d09c891d41ba65b1ce2d9c.png","Variations":0,"Rarity":5,"IsKnife":false,"ItemCollectionId":47},"AUG | Hot Rod":{"Name":"AUG | Hot Rod","FloatMin":0,"FloatMax":8,"ImageUrl":"https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_aug_an_red_light_large.9adb894f02aff778fff9188a24eea1f0c8b66685.png","Variations":0,"Rarity":2,"IsKnife":false,"ItemCollectionId":47},"Negev | Anodized Navy":{"Name":"Negev | Anodized Navy","FloatMin":0,"FloatMax":8,"ImageUrl":"https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_negev_an_navy_light_large.5dafc320a35bc04e03bbe0c4e4b1b293398d1bda.png","Variations":0,"Rarity":2,"IsKnife":false,"ItemCollectionId":47},"Five-SeveN | Candy Apple":{"Name":"Five-SeveN | Candy Apple","FloatMin":0,"FloatMax":30,"ImageUrl":"https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_fiveseven_so_red_light_large.29ae7b2264bd2a390ecf51a51293d2c2202fdea9.png","Variations":0,"Rarity":1,"IsKnife":false,"ItemCollectionId":47},"UMP-45 | Caramel":{"Name":"UMP-45 | Caramel","FloatMin":6,"FloatMax":80,"ImageUrl":"https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_ump45_so_caramel_light_large.4883dbae989e9c61805aa53ca5a02983f74657b9.png","Variations":0,"Rarity":0,"IsKnife":false,"ItemCollectionId":47},"SG 553 | Tornado":{"Name":"SG 553 | Tornado","FloatMin":6,"FloatMax":80,"ImageUrl":"https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_sg556_so_tornado_light_large.32d15282560b205fb387cf876fc19da381951986.png","Variations":0,"Rarity":0,"IsKnife":false,"ItemCollectionId":47}},"SouvenirPackId":null,"SouvenirPackName":null,"SouvenirPackImg":null}' id="dataScript">
+    </script>
+    <style>
+        .lds-ring {
+          display: inline-block;
+          position: relative;
+          width: 80px;
+          height: 80px;
+        }
+        .lds-ring div {
+          box-sizing: border-box;
+          display: block;
+          position: absolute;
+          width: 64px;
+          height: 64px;
+          margin: 8px;
+          border: 8px solid #fff;
+          border-radius: 50%;
+          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          border-color: #fff transparent transparent transparent;
+        }
+        .lds-ring div:nth-child(1) {
+          animation-delay: -0.45s;
+        }
+        .lds-ring div:nth-child(2) {
+          animation-delay: -0.3s;
+        }
+        .lds-ring div:nth-child(3) {
+          animation-delay: -0.15s;
+        }
+        @keyframes lds-ring {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+        #loader {
+            width: 100vw;
+            height: 100vh;
+            /* display: block; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+            background-color: #212529;
+        }
+
+        #loader-title {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+            font-weight: 500;
+            font-size: 22;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body style="background-color: #212529">
+    <!-- This script installs service_worker.js to provide PWA functionality to
+         application. For more information, see:
+         https://developers.google.com/web/fundamentals/primers/service-workers -->
+    <div id="loader">
+        <h1 id="loader-title">Loading...</h1>
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    </div>
+   
+    <script>var serviceWorkerVersion = '2354065456';
+        var scriptLoaded = false;
+        function loadMainDartJs() {
+            if (scriptLoaded) {
+                return;
+            }
+            scriptLoaded = true;
+            var scriptTag = document.createElement('script');
+            scriptTag.src = 'https://d28b6f0yk2b012.cloudfront.net/js/main.dart.js?v=4';
+            scriptTag.type = 'application/javascript';
+            document.body.append(scriptTag);
+        }
+
+        if ('serviceWorker' in navigator) {
+            // Service workers are supported. Use them.
+            window.addEventListener('load', function () {
+                // Wait for registration to finish before dropping the <script> tag.
+                // Otherwise, the browser will load the script multiple times,
+                // potentially different versions.
+                var serviceWorkerUrl = 'https://d28b6f0yk2b012.cloudfront.net/js/flutter_service_worker.js?v=' + serviceWorkerVersion;
+                navigator.serviceWorker.register(serviceWorkerUrl)
+                    .then((reg) => {
+                        function waitForActivation(serviceWorker) {
+                            serviceWorker.addEventListener('statechange', () => {
+                                if (serviceWorker.state == 'activated') {
+                                    console.log('Installed new service worker.');
+                                    loadMainDartJs();
+                                }
+                            });
+                        }
+                        if (!reg.active && (reg.installing || reg.waiting)) {
+                            // No active web worker and we have installed or are installing
+                            // one for the first time. Simply wait for it to activate.
+                            waitForActivation(reg.installing || reg.waiting);
+                        } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+                            // When the app updates the serviceWorkerVersion changes, so we
+                            // need to ask the service worker to update.
+                            console.log('New service worker available.');
+                            reg.update();
+                            waitForActivation(reg.installing);
+                        } else {
+                            // Existing service worker is still good.
+                            console.log('Loading app from service worker.');
+                            loadMainDartJs();
+                        }
+                    });
+
+                // If service worker doesn't succeed in a reasonable amount of time,
+                // fallback to plaint <script> tag.
+                setTimeout(() => {
+                    if (!scriptLoaded) {
+                        console.warn(
+                            'Failed to load app from service worker. Falling back to plain <script> tag.',
+                        );
+                        loadMainDartJs();
+                    }
+                }, 4000);
+            });
+        } else {
+            // Service workers not supported. Just drop the <script> tag.
+            loadMainDartJs();
+        }</script>
+</body>
+</html>
