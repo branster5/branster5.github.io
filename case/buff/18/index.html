@@ -110,7 +110,7 @@
             }
             scriptLoaded = true;
             var scriptTag = document.createElement('script');
-            scriptTag.src = 'https://d28b6f0yk2b012.cloudfront.net/js/main.dart.js?v=4';
+            scriptTag.src = '/js/main.dart.js?v=5';
             scriptTag.type = 'application/javascript';
             document.body.append(scriptTag);
         }
@@ -121,7 +121,7 @@
                 // Wait for registration to finish before dropping the <script> tag.
                 // Otherwise, the browser will load the script multiple times,
                 // potentially different versions.
-                var serviceWorkerUrl = 'https://d28b6f0yk2b012.cloudfront.net/js/flutter_service_worker.js?v=' + serviceWorkerVersion;
+                var serviceWorkerUrl = '/js/flutter_service_worker.js?v=' + serviceWorkerVersion;
                 navigator.serviceWorker.register(serviceWorkerUrl)
                     .then((reg) => {
                         function waitForActivation(serviceWorker) {
