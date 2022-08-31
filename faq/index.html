@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - CSROI.com</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=GPBDPu5_vHHScwA_UMsvOHNMV5mynZ_PjolXZtqSXHU" />
+    <link rel="stylesheet" href="/CSROISite.styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0d4626cb88.js" crossorigin="anonymous"></script>
+    <style>
+        .accordion-button:not(.collapsed) {
+            color: white;
+        }
+        .collapsed {
+            color: #0c63e4;
+        }
+        .btn-primary {
+            color: #fff;
+            background-color: #bb171a;
+            border-color: #bb171a;
+        }
+        a:hover {
+            color: #fff !important;
+        }
+        .btn-check:active + .btn-outline-primary, .btn-check:checked + .btn-outline-primary, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show, .btn-outline-primary:active {
+            color: #fff;
+            background-color: #bb171a;
+            border-color: #bb171a;
+        }
+        .btn-check:focus:not(:checked) ~ .custom-control-label::before {
+            border-color: red !important;
+        }
+        .btn-outline-primary {
+            color: #fff !important;
+            border-color: #bb171a !important;
+        }
+        .btn-outline-primary:hover {
+            color: #fff !important;
+            border-color: #bb171a !important;
+            background-color: rgba(0,0,0,0); !important;
+        }
+        table.sortable tbody {
+            counter-reset: sortabletablescope;
+        }
+
+        table.sortable thead tr::before {
+            content: "";
+            display: table-cell;
+        }
+
+        table.sortable tbody tr::before {
+            content: "#" counter(sortabletablescope);
+            counter-increment: sortabletablescope;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+    </style>
+</head>
+<body style="background-color: #212529; margin-bottom: 0;">
+    <main role="main" style="">
+        <div style="background-color: #212529; font-family: 'Barlow', sans-serif;">
+            <nav class="navbar navbar-light bg-dark">
+                <div class="container-fluid">
+                    <a href="https://csroi.com" style="margin: auto"><img src="/csroi.png" width="300" /></a>
+                </div>
+            </nav>
+            <div style="color: white; text-align: center; padding-top: 2rem; padding-left: 5rem; padding-right: 5rem;">
+                <h1><u>FAQ</u></h1>
+                <br />
+                <h2>What are ROI and Profit%?</h2>
+                <br />
+
+                ROI means Return On Investment but in unboxing terms you can think of it as the average value you receive when you open a container. For example, if a case that costs $10 and it has an ROI of 50%, it returns you $5 on average per case, BUT this does not take into account any losses from steam or buff taxes after selling. <br /><br />
+
+                Profit% is the chance of opening something more expensive than the case. For example if a case costs $10, and it has a Profit% of 10% then on average you would have to open 10 cases to open an item more expensive than $10, this does not take into account any losses from steam or buff taxes after selling.<br /><br />
+
+                <br />
+                <h2>What is a Prize Sheet?</h2>
+                <br />
+
+                Each container on CSROI.com can be viewed in a "Prize Sheet", by pressing the right most "OPEN" button on any container in the main rankings page. On this page, all rarities and items in the container are shown, with different sizes. <br /><br />Each rarity is given a % of the screen (prominently shown at the top of each rarity), based on how much each rarity adds value to the ROI. For instance, at the time of writing the Clutch Case's items in Covert, Classified, Restricted and Mil-Spec rarities only provide around 20% of the ROI in total, with the other 80% of the ROI being provided by the exceedingly rare gloves. Although, any rarity that has lower than 5% of the ROI, will automatically be sized up to 5% of the screen, so that no items are completely invisible.<br /><br />Items are shown in descending order of value in a rarity, hence the most valuable items are displayed at the top of each rarity, in most clear view. Also, the size of an item is determined by their average unboxed cost, where the item with the highest cost will utilize the largest size possible in a rarity and each less expensive item is dynamically resized smaller based on how much less expensive that item is.<br /><br />
+
+                <br />
+                <h2>Why do these Prize Sheets work poorly on my device?</h2>
+                <br />
+
+                Currently Prize Sheets are one of the highest priorities to fix in this app. The prize sheets are rendered in a web app, meaning some older generation devices may struggle for performance, however in my testing this is relatively negligable. <br /><br /> Prize pages have been optimized for Desktop usage. Devices such as tablets still have reasonable functionality but smaller devices such as phones have poor functionality due to the layout sizing creating problems showing all elements on the screen at once. This will be fixed in the near future, possibily with a phone specific layout of prize sheets. <br /><br />
+
+                <br />
+                <h2>How are these numbers calculated?</h2>
+
+                <br />
+                <a href="https://www.csgo.com.cn/news/gamebroad/20170911/206155.shtml" target="_blank">In 2017, when Valve released CS:GO to China, they were forced to publish the odds of their cases, capsules, etc.</a> This official source confirms that each rarity is 5x rarer than the past rarity to receive, except for exceedingly rare special items (knives, gloves) which are 2.5x rarer than the covert rarity, and industrial grade to mil-spec grade which are 4.8x rarer. All items within the same rarity have the same chance to receive. <br /><br />With this knowledge its possible to calculate how often you'll receive each item, but not how often you receive each wear for each item (field-tested, factory new, etc.). <br />
+
+                <a href="https://blog.csgofloat.com/analysis-of-float-value-and-paint-seed-distribution-in-cs-go/" target="_blank">This in-depth look at float/wear values and how they work by CSGOFloat here</a> is what allows the calculation of wears for each item. Without going into too much detail, each item has a minimum wear and a maximum wear between 0-1, a.k.a a wear range. This directly determines the chance to receive each wear, with a wear range of 0-1 having the corresponding wear chances:
+
+                <br />
+                <br />
+
+                <table>
+                    <tr><th>WEAR</th><th>PROBABILITY</th></tr>
+                    <tr><td>Factory New (0.00-0.07)</td><td>~3%</td></tr>
+                    <tr><td>Minimal Wear (0.07-0.15)</td><td>~24%</td></tr>
+                    <tr><td>Field-Tested (0.15-0.38)</td><td>~33%</td></tr>
+                    <tr><td>Well-Worn (0.38-0.45)</td><td>~24%</td></tr>
+                    <tr><td>Battle-Scarred (0.45-1.00)</td><td>~16%</td></tr>
+                </table>
+
+                <br />
+
+                What if the wear range of the item isn't 0-1 though? These probabilities get squished into the wear range of your item. For example, if the wear range of your item is 0-0.5 these are the corresponding probabilities:
+
+                <br />
+                <br />
+
+                <table>
+                    <tr><th>WEAR</th><th>PROBABILITY</th></tr>
+                    <tr><td>Factory New (0.00-0.07)</td><td>~23.57%</td></tr>
+                    <tr><td>Minimal Wear (0.07-0.15)</td><td>~24.43%</td></tr>
+                    <tr><td>Field-Tested (0.15-0.38)</td><td>~44.89%</td></tr>
+                    <tr><td>Well-Worn (0.38-0.45)</td><td>~4.15%</td></tr>
+                    <tr><td>Battle-Scarred (0.45-0.5)</td><td>~2.96%</td></tr>
+                </table>
+
+                <br />
+
+                A Factory New (0-0.07 wear) wear in a full wear range item (0-1) has a chance of 3% and a Minimal Wear (0.07-0.15) in a full wear range item (0-1) has a chance of 24%. If you squish this in a 0-0.5 float range, these ranges for wears get shifted from 0-0.07, to 0-0.035 at 3% drop chance and 0.035-0.075 at 24% drop chance, resulting in 3% + (0.07-0.035/0.075-0.035 * 24%) = 24% chance of receiving Factory New.<br /><br />
+
+                If you're following along you may be confused at why the table specifies a different result to the calculations, and this is because there is one last factor, missing wear ranges. On a 0-1 wear range item, there are specific floats that cannot be received from unboxing, at the edge of each wear rating. For example, at the edge between Factory New and Minimal Wear (0.07), there is a 0.01 range of wears that are NOT unboxable, meaning you will not unbox an item with a wear value between 0.07-0.08. All the missing wear ranges for a item with a wear range of 0-1 is, 0.07-0.08, 0.15-0.16, 0.38-0.39 and 0.45-0.46. The most logical theory for why these gaps exist is to distinguish the best minimal wear dropped from the worst factory new dropped, as they have to have at least 0.01 difference in wear.<br /><br />
+
+                These missing wear ranges are also squished into the wear range of the item, e.g. in a 0-0.5 wear range item, you will not receive an unboxed item with a wear between 0.035-0.04, as in a 0-1 wear range you will not receive an unboxed item with a wear between 0.07-0.08. This means in a 0-0.5 float range, the ranges for wears get shifted from 0-0.07, to 0-0.035 at 3% drop chance and 0.04-0.075 at 24% drop chance, resulting in 3% + (0.07-0.04)/(0.075-0.04) * 24% = 23.57%.<br /><br />
+
+                When you can predict how often you receive an item, and how often you will receive each wear of the item you can then combine all values to find an ROI and a Profit% for each container in CS:GO.<br /><br />
+
+                <br />
+                <h2>Where are prices sourced from?</h2>
+                <br />
+
+                <a href="https://csgotrader.app/prices/" target="_blank">All prices are sourced from CSGOTrader's API, detailed and available here.</a> This API was chosen as it is one of the few available with BUFF.163 and Steam pricing for free, although it does offer even more pricing sources, they have not been implemented as of yet, this is something that can be added if there is demand for it.<br /><br />
+
+                In extreme situations where a price for steam or buff is not available, for example, knives over the steam wallet limit of $2000, a Buff.163 to Steam ratio is applied to the item to predict using the other pricing source's value for the item. For example, the Karambit | Crimson Web (Factory New), is a very rare and sought after item with an unbox chance of 1 in 4,868,774 cases that contain it. Hence it will sell on Buff.163 for $3448 (as of writing), which is over the steam wallet limit and is predicted to have a steam value of $4646 (as of writing) due to knives being 1.347 times more expensive on steam than Buff.163 on average.<br /><br />
+
+                <br />
+            </div>
+        </div>
+        <p style="text-align: center; margin: auto; color: white; padding:2rem;">©2022 CSROI.com<br />All containers, items and their corresponding images shown on this site are the property of Valve Corporation. CSROI.com does not guarantee that all probability calculations are correct as Valve Corporation controls all unboxing odds, this site serves merely to estimate the odds with community known data. </p>
+        <a href="https://steamcommunity.com/tradeoffer/new/?partner=83942777&token=Z_ZUTuBY"><p style="text-align: center; margin: auto">Donate ❤️</p></a>
+    </main>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=ZuuafqFPrVRBKcjc9nVnUgldbE3hS3GG5WeZxe6SIR0"></script>
+    <script src="/js/sorttable.js"></script>
+</body>
+</html>
