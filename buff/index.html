@@ -285,32 +285,33 @@
         <div style="background-color: #212529; font-family: 'Barlow', sans-serif;">
             <nav class="navbar navbar-light bg-dark">
                 <div class="container-fluid">
-                    <img src="/csroi.png" width="300" style="margin: auto" />
+                    <img src="/csroi.png" width="300" style="margin: auto" class="p-2" />
+                    <input type="checkbox" name="pricing" id="pricing" checked onchange="changePricingSource()" class="btn-check" />
+                        <label for="pricing" class="btn btn-outline-primary" style="margin:auto;">BUFF</label>
                     <div style="margin: auto;" class="p-3">
-                        <input type="checkbox" name="pricing" id="pricing" checked onchange="changePricingSource()" class="btn-check" />
-                        <label for="pricing" class="btn btn-outline-primary">BUFF</label>
-                        <div class="btn-group ps-3">
+                        
+                        <div class="btn-group ps-3" style="display: grid; grid-template-columns: auto auto auto;">
                             <input type="checkbox" name="cases" id="cases" checked onchange="sortRows()" class="btn-check" />
-                            <label for="cases" class="btn btn-outline-primary">Cases</label>
+                            <label for="cases" class="btn btn-outline-primary" style="border-bottom-left-radius:0;">Cases</label>
                             <input type="checkbox" name="stickers" id="stickers" onchange="sortRows()" class="btn-check" />
                             <label for="stickers" class="btn btn-outline-primary">Stickers</label>
                             <input type="checkbox" name="autographs" id="autographs" onchange="sortRows()" class="btn-check" />
-                            <label for="autographs" class="btn btn-outline-primary">Autographs</label>
-                            <input type="checkbox" name="souvenirs" id="souvenirs" onchange="sortRows()" class="btn-check" />
+                            <label for="autographs" class="btn btn-outline-primary" style="border-top-right-radius:0.25rem;">Autographs</label>
+                            <input type="checkbox" name="souvenirs" id="souvenirs" onchange="sortRows()" class="btn-check"  />
                             <label for="souvenirs" class="btn btn-outline-primary">Souvenirs</label>
                             <input type="checkbox" name="patches" id="patches" onchange="sortRows()" class="btn-check" />
                             <label for="patches" class="btn btn-outline-primary">Patches</label>
                             <input type="checkbox" name="musicKits" id="musicKits" onchange="sortRows()" class="btn-check" />
                             <label for="musicKits" class="btn btn-outline-primary">Music Kits</label>
                             <input type="checkbox" name="pins" id="pins" onchange="sortRows()" class="btn-check" />
-                            <label for="pins" class="btn btn-outline-primary">Pins</label>
+                            <label for="pins" class="btn btn-outline-primary" style="border-bottom-left-radius:0.25rem;"/>Pins</label>
                             <input type="checkbox" name="graffiti" id="graffiti" onchange="sortRows()" class="btn-check" />
                             <label for="graffiti" class="btn btn-outline-primary">Graffiti</label>
                             <input type="checkbox" name="pastOperation" id="pastOperation" onchange="sortRows()" class="btn-check" />
-                            <label for="pastOperation" class="btn btn-outline-primary">Past Operations</label>
+                            <label for="pastOperation" class="btn btn-outline-primary" style="border-top-right-radius:0;">Past Operations</label>
                         </div>
                     </div>
-                    <form class="d-flex input-group w-auto" style="margin: auto;">
+                    <form class="d-flex input-group w-auto p-2" style="margin: auto;">
                         <input type="search"
                                class="form-control rounded border"
                                placeholder="Search"
