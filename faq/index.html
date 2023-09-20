@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAQ - CSROI.com</title>
     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/site.css?v=GPBDPu5_vHHScwA_UMsvOHNMV5mynZ_PjolXZtqSXHU" />
+    <link rel="stylesheet" href="/css/site.css?v=4YKcydZwYrF5PiFN8zDZtiPPSmGFRw0cDOhReFywmHk" />
     <link rel="stylesheet" href="/CSROISite.styles.css?v=OFP7669oorPRMZbR97TwU9nrT1EC3w-j1HpdmZxibFc" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,6 +72,87 @@
     </style>
 </head>
 <body style="background-color: #212529; margin-bottom: 0;">
+    <style>
+        /* Add your CSS styling for the banner here */
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        #cookie-banner button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #cookie-banner button.accept {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+        }
+        #cookie-banner button.decline {
+            background-color: #d32f2f;
+            border: none;
+            color: white;
+        }
+    </style>
+    <div id="cookie-banner">
+        <p>This website uses cookies to ensure you get the best experience. By continuing to use this website, you consent to the use of cookies.</p>
+        <button class="accept" onclick="acceptCookies()">Accept</button>
+        <button class="decline" onclick="declineCookies()">Decline</button>
+    </div>
+    <script>
+        // JavaScript function to set a cookie to record user consent
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/; domain=csroi.com";
+        }
+
+        // Function to handle cookie consent
+        function acceptCookies() {
+            setCookie("cookie_consent", "accepted", 365); // Cookie consent is valid for 365 days
+            document.getElementById("cookie-banner").style.display = "none";
+        }
+
+        // Function to handle declining cookies
+        function declineCookies() {
+            setCookie("cookie_consent", "declined", 365); // Cookie consent is valid for 365 days
+            // Disable Google Analytics by removing the tracking script
+            var analyticsScript = document.querySelector("script[src^='https://www.googletagmanager.com/gtag/js?id=G-L9JX4L18KF']");
+            if (analyticsScript) {
+                analyticsScript.remove();
+            }
+            document.getElementById("cookie-banner").style.display = "none";
+        }
+
+        // Check if the user has previously accepted or declined cookies
+        var consentCookie = document.cookie.split(';').find(function(cookie) {
+            return cookie.trim().startsWith("cookie_consent=");
+        });
+
+        if (consentCookie) {
+            document.getElementById("cookie-banner").style.display = "none";
+        }
+
+
+        if (!consentCookie) {
+            // Show the cookie consent banner if the consent cookie doesn't exist
+            document.getElementById("cookie-banner").style.display = "block";
+        } else if (consentCookie.includes("declined")) {
+            // If the user has previously declined cookies, disable Google Analytics
+            declineCookies();
+        }
+    </script>
     <main role="main" style="">
         <div style="background-color: #212529; font-family: 'Barlow', sans-serif;">
             <nav class="navbar navbar-light bg-dark">
@@ -161,8 +242,6 @@
                 <br />
 
                 <a href="https://csgotrader.app/prices/" target="_blank">All prices are sourced from CSGOTrader's API, detailed and available here.</a> This API was chosen as it is one of the few available with BUFF.163 and Steam pricing for free, although it does offer even more pricing sources, they have not been implemented as of yet, this is something that can be added if there is demand for it.<br /><br />
-
-                In extreme situations where a price for steam or buff is not available, for example, knives over the steam wallet limit of $2000, a Buff.163 to Steam ratio is applied to the item to predict using the other pricing source's value for the item. For example, the Karambit | Crimson Web (Factory New), is a very rare and sought after item with an unbox chance of 1 in 4,868,774 cases that contain it. Hence it will sell on Buff.163 for $3448 (as of writing), which is over the steam wallet limit and is predicted to have a steam value of $4646 (as of writing) due to knives being 1.347 times more expensive on steam than Buff.163 on average.<br /><br />
 
                 <br />
             </div>
