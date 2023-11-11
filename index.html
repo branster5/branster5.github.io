@@ -27,6 +27,16 @@
             window.open("/" + option, "_self");
         }
 
+        function checkAlert() {
+            if (localStorage.getItem('alertShown') !== 'true') {
+                // Show the alert
+                alert("Currently pricing is outdated due to CSGOTrader's API not being updated as of Oct 30.\nWork is being conducted to fix this problem ASAP using more direct pricing.\nThank you for your patience."); // You can customize the message here
+
+                // Mark the alert as shown
+                localStorage.setItem('alertShown', 'true');
+            }
+        }
+
         // Function to toggle the dropdown content on mobile tap
 
 
@@ -296,7 +306,7 @@
 
     </style>
 </head>
-<body style="background-color: #212529; margin-bottom: 0;">
+<body style="background-color: #212529; margin-bottom: 0;"  onload="checkAlert()">
     <style>
         /* Add your CSS styling for the banner here */
         #cookie-banner {
@@ -376,7 +386,7 @@
             declineCookies();
         }
     </script>
-    <main role="main" style="">
+    <main role="main">
         <div style="background-color: #212529; font-family: 'Barlow', sans-serif;" >
             
             <nav class="navbar navbar-light bg-dark" style="padding-bottom: 0.5rem;">
